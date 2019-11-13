@@ -78,13 +78,13 @@ export default function createTabNavigator<
       tintColor,
       horizontal = false,
     }: RenderIconProps) => {
-      const { descriptors } = this.props;
+      const { descriptors, navigation } = this.props;
       const descriptor = descriptors[route.key];
       const options = descriptor.options;
 
       if (options.tabBarIcon) {
         return typeof options.tabBarIcon === 'function'
-          ? options.tabBarIcon({ focused, tintColor, horizontal })
+          ? options.tabBarIcon({ navigation, focused, tintColor, horizontal })
           : options.tabBarIcon;
       }
 
