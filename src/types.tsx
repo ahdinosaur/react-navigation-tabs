@@ -210,6 +210,7 @@ export type NavigationCommonTabOptions = {
   tabBarIcon?:
     | React.ReactNode
     | ((props: {
+        route: NavigationRoute;
         focused: boolean;
         tintColor?: string;
         horizontal?: boolean;

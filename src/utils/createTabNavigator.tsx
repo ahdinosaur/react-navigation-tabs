@@ -84,7 +84,7 @@ export default function createTabNavigator<
 
       if (options.tabBarIcon) {
         return typeof options.tabBarIcon === 'function'
-          ? options.tabBarIcon({ focused, tintColor, horizontal })
+          ? options.tabBarIcon({ route, focused, tintColor, horizontal })
           : options.tabBarIcon;
       }
 
